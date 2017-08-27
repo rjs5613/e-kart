@@ -8,6 +8,9 @@ require(['app'], function(app){
 		productService.getAllProduct=function(){
 			return $http.get('http://localhost:8080/products');
 		}
+		productService.getProductDetails = function(productId){
+			return $http.get('http://localhost:8080/products/'+productId);
+		}
 		return productService;
 	}
 

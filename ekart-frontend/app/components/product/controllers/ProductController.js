@@ -10,6 +10,13 @@ require(['app',
 			$scope.products = data;
 		}
 		productService.getAllProduct().success(successHandler);
+
+		$scope.getProductDetails = function(productId){
+			productService.getProductDetails(productId).success(function(data, status){
+				$scope.product = data;
+			});
+		}
+
 	}
 
 	productController.$inject = ['$scope','productService'];

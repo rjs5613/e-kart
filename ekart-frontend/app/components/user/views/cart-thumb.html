@@ -1,0 +1,30 @@
+<div class="dropdown">
+<button class="btn btn-default btn-sm dropdown-toggle" type="button" data-toggle="dropdown">
+    <span class="glyphicon glyphicon-shopping-cart badge" ng-cloak>{{size}}</span>Cart
+    <span class="caret"></span>
+</button>
+<ul class="dropdown-menu">
+	<div ng-repeat = "item in cartItems">
+		<table class="table table-condensed">
+			<tbody>
+				<tr>
+					<td><img ng-src="images/nexus4.jpg" alt="Description" width="10%" height="10%"/></td>
+					<td><a href="#products/{{item.id}}">{{ item.name }}</a></td>
+					<td>{{item.price}}</td>
+					<td>{{item.ratings}}</td>
+					<td>
+				        <button type="button" class="btn btn-xs" style="font-size:10px;">
+				          <span class="glyphicon glyphicon-shopping-cart"></span> Buy Now
+				        </button>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<div class="panel-footer" align="center">
+		<button class="btn btn-default btn-sm" type="button">
+		    <span class="glyphicon glyphicon-shopping-cart" ></span> Go To Shopping Cart
+		</button>
+	</div>
+</ul>
+</div>

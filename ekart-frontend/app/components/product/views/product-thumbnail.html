@@ -1,0 +1,25 @@
+<div id="container" class="col-sm-4 col-md-3 text-center"  style="border:1px solid #cecece;margin-left:20px;margin-bottom:20px;">
+	<img ng-src="images/nexus4.jpg" alt="Description" width="50%" height="50%"/>
+	<div>
+		<a href="#products/{{product.id}}">{{ product.name }}</a>
+	</div>
+		<div>
+		Price: {{ product.price }}
+	</div>
+		<div>
+		Ratings : {{ product.ratings }}
+	</div>
+	<div>
+		<div class="row">
+		    <div class="col-sm-12 text-center" style="margin-bottom:20px;margin-top:20px;">
+		        <button type="button" class="btn btn-default btn-sm">
+		          <span class="glyphicon glyphicon-shopping-cart"></span> Add to Cart
+		        </button>
+		        <button type="button" class="btn btn-default btn-sm" style="margin-left:20px;">
+		          <span class="glyphicon glyphicon-shopping-cart"></span> Buy Now
+		        </button>
+		    </div>
+		</div>
+	</div>
+</div>
+<span  class="col-md-6" style="width:20px;"></span>

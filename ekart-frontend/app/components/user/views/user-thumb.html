@@ -1,0 +1,18 @@
+<div class="dropdown">
+<button class="btn btn-default btn-sm dropdown-toggle" type="button" data-toggle="dropdown">
+    <span class="glyphicon glyphicon-user"></span>Account
+    <span class="caret"></span>
+</button>
+<ul class="dropdown-menu">
+	<div ng-hide="loggedIn" align="center">
+		<button class="btn btn-default btn-sm" type="button">
+		    <span class="glyphicon glyphicon-log-in" ng-click="open()"></span> Login / Register
+		</button>
+	</div>
+	<div ng-show="loggedIn">
+		<li>Account</li>
+		<li>Order History</li>
+		<li>Logout</li>
+	</div>
+</ul>
+</div>

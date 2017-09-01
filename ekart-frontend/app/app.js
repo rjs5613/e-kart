@@ -9,27 +9,18 @@ define([
         'components/user/directives/WishlistDirective',
 		'components/common/directives/HeaderDirective',
         'components/common/directives/SideBarDirective',
-		'components/product/controllers/ProductController'
+		'components/product/controllers/ProductController',
+        'components/common/interceptors/HttpRequestInterceptor',
+        'components/Route'
 
-	], function(angular, productController){
+	], function(angular, productController,httpRequestInterceptor){
 
 	var app = angular.module('myApp', ['ngRoute']);
 
-	function routeProvider($routeProvider) {
-        $routeProvider.
-        when('/', {
-            templateUrl: 'components/product/views/product-list.html',
-           	controller: 'productController'
-        }).
-        when('/about', {
-            templateUrl: 'components/common/views/about.html',
-        }).when('/contact',{
-        	templateUrl: 'components/common/views/contact.html',
-        }).when('/products/:id',{
-            templateUrl: 'components/product/views/product-details.html',
-        })
+    function httpRequestInterceptor($httpProvider){
+        $httpProvider.interceptors.push('httpRequestInterceptor');
     }
-	app.config(['$routeProvider',routeProvider]);
+    app.config(['$httpProvider','$locationProvider',httpRequestInterceptor]);
 
     return app;
 })

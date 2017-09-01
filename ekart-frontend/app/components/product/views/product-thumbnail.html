@@ -1,7 +1,7 @@
 <div id="container" class="col-sm-4 col-md-3 text-center"  style="border:1px solid #cecece;margin-left:20px;margin-bottom:20px;">
 	<img ng-src="images/nexus4.jpg" alt="Description" width="50%" height="50%"/>
 	<div>
-		<a href="#products/{{product.id}}" ng-click="getProductDetails(product.id);">{{ product.name }}</a>
+		<a href="/products/{{product.id}}" ng-click="getProductDetails(product.id);">{{ product.name }}</a>
 	</div>
 		<div>
 		Price: {{ product.price }}

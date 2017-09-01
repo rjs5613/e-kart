@@ -6,11 +6,11 @@ require(['app'], function(app){
 	function userService($http){
 		var userService = {};
 		userService.getWishList=function(userID){
-			return $http.get('http://localhost:8080/products');
+			return $http.get('/products');
 		}
 
 		userService.getCart=function(userID){
-			return $http.get('http://localhost:8080/products');
+			return $http.get('/products');
 		}
 		return userService;
 	}

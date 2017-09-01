@@ -6,10 +6,10 @@ require(['app'], function(app){
 	function productService($http){
 		var productService = {};
 		productService.getAllProduct=function(){
-			return $http.get('http://localhost:8080/products');
+			return $http.get('/products');
 		}
 		productService.getProductDetails = function(productId){
-			return $http.get('http://localhost:8080/products/'+productId);
+			return $http.get('/products/'+productId);
 		}
 		return productService;
 	}

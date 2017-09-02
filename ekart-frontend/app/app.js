@@ -4,6 +4,8 @@ define([
 		'angularRoute',
         'jquery',
         'bootstrap',
+        'bootstrap-ui',
+        "bootstrap-ui-tpl",
         'components/user/directives/CartDirective',
         'components/user/directives/UserAccountDirective',
         'components/user/directives/WishlistDirective',
@@ -15,7 +17,7 @@ define([
 
 	], function(angular, productController,httpRequestInterceptor){
 
-	var app = angular.module('myApp', ['ngRoute']);
+	var app = angular.module('myApp', ['ngRoute', 'ui.bootstrap']);
 
     function httpRequestInterceptor($httpProvider){
         $httpProvider.interceptors.push('httpRequestInterceptor');

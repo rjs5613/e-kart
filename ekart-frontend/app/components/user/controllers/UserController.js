@@ -3,11 +3,11 @@
 require(['app'
 	], function(app){
 
-	function userController($scope, $location){
+	function userController($scope, $uibModal){
 
 		$scope.loggedIn=false;
 
-	    $scope.open = function () {
+	    $scope.openPopUp = function () {
 			console.log('opening pop up');
 			var modalInstance = $uibModal.open({
 				templateUrl: 'components/user/views/sign-in.html',
@@ -15,7 +15,7 @@ require(['app'
 		}
 	}
 
-	userController.$inject = ['$scope', '$location'];
+	userController.$inject = ['$scope', '$uibModal'];
 	app.controller('userController', userController);
 
 })

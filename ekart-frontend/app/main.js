@@ -6,7 +6,9 @@ require.config({
         'angularRoute': 'bower_components/angular-route/angular-route.min',
         'app' : 'app',
         "jquery": "bower_components/jquery/dist/jquery.min",
-        "bootstrap": "bower_components/bootstrap/dist/js/bootstrap.min"
+        "bootstrap": "bower_components/bootstrap/dist/js/bootstrap.min",
+        "bootstrap-ui": "bower_components/angular-bootstrap/ui-bootstrap.min",
+        "bootstrap-ui-tpl": "bower_components/angular-bootstrap/ui-bootstrap-tpls.min"
     },
     shim: { 
     	angular: {
@@ -18,6 +20,12 @@ require.config({
     	},
         "bootstrap": {
             deps: ["jquery"]
+        },
+        "bootstrap-ui": {
+            deps: ["angular"]
+        },
+        "bootstrap-ui-tpl": {
+            deps : ["bootstrap-ui"]
         }
     },
     deps: ['app']

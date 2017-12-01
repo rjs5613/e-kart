@@ -14,7 +14,8 @@ require(['app'
         }).when('/contact',{
         	templateUrl: '/components/common/views/contact.html',
         }).when('/products/:id',{
-            templateUrl: '/components/product/views/product-details.html'
+            templateUrl: '/components/product/views/product-details.html',
+            controller: 'productController'
         })
         $locationProvider.html5Mode({
 		  enabled: true,
